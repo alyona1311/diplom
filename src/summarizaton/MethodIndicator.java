@@ -5,23 +5,20 @@
  */
 package summarizaton;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import ru.library.text.word.Word;
 import ru.textanalysis.tfwwt.jmorfsdk.jmorfsdk.JMorfSdk;
 import ru.textanalysis.tfwwt.jmorfsdk.jmorfsdk.load.JMorfSdkLoad;
 import ru.textanalysis.tfwwt.morphological.structures.grammeme.MorfologyParameters;
 import ru.textanalysis.tfwwt.morphological.structures.grammeme.MorfologyParameters.TypeOfSpeech;
-import ru.textanalysis.tfwwt.morphological.structures.internal.OmoForm;
+import ru.textanalysis.tfwwt.morphological.structures.internal.IOmoForm;
 import ru.textanalysis.tfwwt.morphological.structures.storage.OmoFormList;
+
+import java.util.*;
+import java.util.Map.Entry;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  *
@@ -191,7 +188,7 @@ public class MethodIndicator {
     private long getRod(String wordToLowerCase) {
         OmoFormList omoForms = jMorfSdk.getAllCharacteristicsOfForm(wordToLowerCase);
         System.out.println("omoForms: " + omoForms);
-        for(OmoForm omoForm : omoForms) {
+        for(IOmoForm omoForm : omoForms) {
             if(omoForm.getTypeOfSpeech() == TypeOfSpeech.ADJECTIVEFULL || omoForm.getTypeOfSpeech() == TypeOfSpeech.ADJECTIVESHORT ) {              
                 return omoForm.getTheMorfCharacteristics(MorfologyParameters.Gender.class);
             }
