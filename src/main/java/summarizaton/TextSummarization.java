@@ -155,7 +155,7 @@ public class TextSummarization {
      String encoding = System.getProperty("console.encoding", "windows-1251");
       System.out.println("Введите через запятую ключевые слова: ");    
         Scanner in = new Scanner(System.in, encoding);
-        String markers = in.nextLine();
+        String markers = "советский";
        List<Float> markersMethod = methodIndicator.getWeightOfSentenceByMarkers(wordsInSentenceInInitialForm, wordsInSentence, markers);
        for (int i = 0; i < markersMethod.size(); i++) {
             System.out.println(i + " " + markersMethod.get(i));

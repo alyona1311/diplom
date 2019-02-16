@@ -157,7 +157,7 @@ public class MethodIndicator {
         System.out.println("Важен ли род?");
         String encoding = System.getProperty("console.encoding", "windows-1251");
         Scanner in = new Scanner(System.in, encoding);
-        String answer = in.nextLine();
+        String answer = "да";
         float weightSentence;
         for (int i = 0; i < wordsInSentenceInInitialForm.size(); i++) {
             weightSentence = 0;
