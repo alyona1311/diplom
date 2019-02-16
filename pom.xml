@@ -23,6 +23,11 @@
             <groupId>keywords.methods.library</groupId>
             <artifactId>methods</artifactId>
             <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>keywords.methods.library</groupId>
+            <artifactId>methods</artifactId>
+            <version>1.0</version>
             <scope>system</scope>
             <systemPath>${basedir}/lib/methods-1.0.jar</systemPath>
         </dependency>
