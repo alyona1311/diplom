@@ -5,6 +5,10 @@
  */
 package summarizaton;
 
+import ru.library.text.word.Word;
+import ru.textanalysis.tfwwt.jmorfsdk.jmorfsdk.JMorfSdk;
+import ru.textanalysis.tfwwt.jmorfsdk.jmorfsdk.load.JMorfSdkLoad;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,9 +18,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 import java.util.regex.Pattern;
-import ru.library.text.word.Word;
-import ru.textanalysis.tfwwt.jmorfsdk.jmorfsdk.JMorfSdk;
-import ru.textanalysis.tfwwt.jmorfsdk.jmorfsdk.load.JMorfSdkLoad;
 
 /**
  *
@@ -48,7 +49,7 @@ public class Sentence {
     public List<List<Word>> splitSentenceByWordsInInitialForm (List<List<String>> wordsInSentence){
         FileHandler fileHandler = null;
         try {
-            fileHandler = new FileHandler("C:/Temp/methodsOfWeight/ExcaptionWords.txt");
+            fileHandler = new FileHandler("result/methodsOfWeight/ExcaptionWords.txt");
         } catch (IOException ex) {
             Logger.getLogger(KeyWords.class.getName()).log(Level.SEVERE, null, ex);
             ex.printStackTrace();
