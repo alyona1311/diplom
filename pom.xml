@@ -23,6 +23,8 @@
             <groupId>keywords.methods.library</groupId>
             <artifactId>methods</artifactId>
             <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/methods-1.0.jar</systemPath>
         </dependency>
     </dependencies>
 
@@ -71,11 +73,4 @@
             </plugin>
         </plugins>
     </build>
-    <repositories>
-        <repository>
-            <id>local</id>
-            <url>${project.basedir}/lib</url>
-        </repository>
-    </repositories>
-
 </project>
